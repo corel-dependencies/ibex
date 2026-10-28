@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "lowrisc_ibex"
+version = "0.1.0"
+description = "lowRISC Ibex packaged for tsfpga."
+requires-python = ">=3.10"
+license = {file = "LICENSE"}
+dependencies = [
+    "tsfpga",
+]
+
+[tool.setuptools]
+packages = ["lowrisc_ibex"]
+
+[tool.setuptools.package-data]
+lowrisc_ibex = ["generated/*.sv", "tcl/*.tcl"]
