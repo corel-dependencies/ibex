@@ -173,6 +173,10 @@ class Module(BaseModule):
     ) -> None:
         super().__init__(path=PACKAGE, library_name="lowrisc_ibex")
 
+    @property
+    def include_dirs(self) -> list[Path]:
+        return INCLUDE_DIRS
+
     def get_synthesis_files(
         self,
         files_include: set[Path] | None = None,
