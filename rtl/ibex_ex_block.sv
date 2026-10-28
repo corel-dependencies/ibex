@@ -8,6 +8,8 @@
  *
  * Execution block: Hosts ALU and MUL/DIV unit
  */
+
+`include "prim_assert.sv"
 module ibex_ex_block #(
   parameter ibex_pkg::rv32m_e RV32M           = ibex_pkg::RV32MFast,
   parameter ibex_pkg::rv32b_e RV32B           = ibex_pkg::RV32BNone,
